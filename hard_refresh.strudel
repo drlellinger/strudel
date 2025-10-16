@@ -1,3 +1,8 @@
+/*    @title    Hard Refresh
+      @by       DJ_Dave - https://github.com/algorave-dave
+      @license  CC BY-NC-SA
+*/
+
 setCps(150/60/4)
 
 samples('github:drlellinger/strudel')
