@@ -69,5 +69,5 @@ VOXCHOP2: s("heartbeat:1<1 0>".slow(2))
 .postgain(pick(PG,beat))
 ._scope({width:600})
 
-all(x=> x.cut(slider(2,2,4)))
+all(x=> x.cut(slider(2,0,4)))
 
