@@ -1,6 +1,7 @@
 setCps(150/60/4)
 
 samples('github:drlellinger/strudel')
+samples('github:tidalcycles/dirt-samples')
 
 const Structures = [
   "{x ~!6 x ~ ~ x ~!3 x ~}%16",
@@ -63,4 +64,5 @@ VOXCHOP2: s("heartbeat:1<1 0>".slow(2))
 .postgain(pick(PG,beat))
 ._scope({width:600})
 
-all(x=> x.cut(slider(4,2,4)))
+all(x=> x.cut(slider(2,2,4)))
+
