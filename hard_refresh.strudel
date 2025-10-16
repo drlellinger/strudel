@@ -20,7 +20,7 @@ const PG = [
   "{0.8}"
 ]
 
-const beat = 2
+const beat = slider(2,0,3)
 //0-2
 
 DRUMS: stack(
