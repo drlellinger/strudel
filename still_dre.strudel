@@ -1,0 +1,11 @@
+/*    @title    Still Dre
+      @by       drlellinger
+      @license  CC BY-NC-SA
+*/
+
+setcps(93/60/4)
+
+PIANO: note("<[c5, e5, a5]!8 [b4, e5, a5]!3 [b4, e5, g5]!5>").fast(8).dec(.5).sound("piano")._punchcard()
+BASS: note("a1@1.5 -@1.5 b1 e1@1.5 -@1.5 e1").slow(2).sound("gm_acoustic_bass")._scope()
+DRUMS: s("bd [sd bd@2] bd sd, hh oh hh!6").dec(.3)._scope()
+SYNTH: note("<[c5 - b4 c5 -@13 b4 c5 - b4 c5 - e5 b4 -@16 b4 c5 - b4 c5 - e5]>/2").transpose(12).sound("tri").dec(.5).delay(.3).delaytime(.4)._punchcard()
