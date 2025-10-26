@@ -111,4 +111,4 @@ $: stack(
    hh3.gain(0.005).delay(0.1).postgain(slider(0,0,1)),
   lead.gain(0.05).postgain(slider(1,0,1)),
 )
-.hpf(slider(0,0,1200))
+.hpf(slider(0,0,1200))._punchcard()
