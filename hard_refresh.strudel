@@ -35,7 +35,10 @@ DRUMS: stack(
 //--
 //--
   s("breaks165").gain(0.4).loopAt(1).chop(16).fit().postgain(pick(PG,beat)),
-  s("psr:[2|12|24|25]".fast(4)).struct("x!7 ~ x!3 ~ x!3 ~").jux(rev).hpf(1000).postgain(pick(PG,beat)).speed(0.5).gain(0.2))._punchcard({width: 600})
+  s("psr:[2|12|24|25]".fast(4)).struct("x!7 ~ x!3 ~ x!3 ~").jux(rev).hpf(1000)
+  .postgain(pick(PG,beat)).speed(0.5).gain(0.2))
+  .postgain(slider(0,0,0.7))
+  ._punchcard({width: 600})
 
 BASSLINE: note("f#3@8 c#3@3 d3@5 a3@8 c#3@3 f#2@8 c#3@3 d3@5 d2@8 d3@3 c#3@5".slow(8))
 .struct("x*16")
@@ -46,7 +49,7 @@ BASSLINE: note("f#3@8 c#3@3 d3@5 a3@8 c#3@3 f#2@8 c#3@3 d3@5 d2@8 d3@3 c#3@5".sl
 .decay(0.075).gain(0.75).hpf(150)
 //.lpf(mouseX.segment(4).range(350,2000))
 .lpf(slider(350,350,2000))
-.postgain(pick(PG,beat))
+.postgain(pick(PG,beat)).postgain(slider(0,0,0.8))
 ._punchcard({width:600})
 
 VOXCHOP1: s("heartbeat:0".slow(2))
@@ -56,7 +59,7 @@ VOXCHOP1: s("heartbeat:0".slow(2))
 .room(2)
 .gain("<0.6 1.6>".slow(2))
 .lpf(slider(4000,600,4000))
-.postgain(pick(PG,beat))
+.postgain(pick(PG,beat)).postgain(slider(1,0,1))
 ._scope({width:600})
 
 VOXCHOP2: s("heartbeat:1<1 0>".slow(2))
@@ -65,9 +68,7 @@ VOXCHOP2: s("heartbeat:1<1 0>".slow(2))
 .chop(32).cut(1).loopAt(4)
 .room(2)
 .gain("<0.6 1.6>".slow(2))
-.lpf(slider(4000,600,4000))
-.postgain(pick(PG,beat))
+.lpf(slider(600,600,4000))
+.postgain(pick(PG,beat)).postgain(slider(0,0,1))
 ._scope({width:600})
-
-all(x=> x.cut(slider(2,0,4)))
-
+//all(x=> x.cut(slider(0,0,100))).gain(slider(0,0,1))
